@@ -38,13 +38,13 @@ local config = function()
 		},
 	})
 
-	-- -- json
-	-- lspconfig.jsonls.setup({
-	-- 	capabilities = capabilities,
-	-- 	on_attach = on_attach,
-	-- 	filetypes = { "json", "jsonc" },
-	-- })
-	--
+	-- json
+	lspconfig.jsonls.setup({
+		capabilities = capabilities,
+		on_attach = on_attach,
+		filetypes = { "json", "jsonc" },
+	})
+
 	-- python
 	lspconfig.pyright.setup({
 		capabilities = capabilities,
@@ -72,13 +72,13 @@ local config = function()
 		root_dir = lspconfig.util.root_pattern("package.json", "tsconfig.json", ".git"),
 	})
 
-	-- -- bash
-	-- lspconfig.bashls.setup({
-	-- 	capabilities = capabilities,
-	-- 	on_attach = on_attach,
-	-- 	filetypes = { "sh" },
-	-- })
-	--
+	-- bash
+	lspconfig.bashls.setup({
+		capabilities = capabilities,
+		on_attach = on_attach,
+		filetypes = { "sh" },
+	})
+
 	-- -- solidity
 	-- lspconfig.solidity.setup({
 	-- 	capabilities = capabilities,
@@ -86,24 +86,24 @@ local config = function()
 	-- 	filetypes = { "solidity" },
 	-- })
 	--
-	-- -- html, typescriptreact, javascriptreact, css, sass, scss, less, svelte, vue
-	-- lspconfig.emmet_ls.setup({
-	-- 	capabilities = capabilities,
-	-- 	on_attach = on_attach,
-	-- 	filetypes = {
-	-- 		"html",
-	-- 		"typescriptreact",
-	-- 		"javascriptreact",
-	-- 		"javascript",
-	-- 		"css",
-	-- 		"sass",
-	-- 		"scss",
-	-- 		"less",
-	-- 		"svelte",
-	-- 		"vue",
-	-- 	},
-	-- })
-	--
+	-- html, typescriptreact, javascriptreact, css, sass, scss, less, svelte, vue
+	lspconfig.emmet_ls.setup({
+		capabilities = capabilities,
+		on_attach = on_attach,
+		filetypes = {
+			"html",
+			"typescriptreact",
+			"javascriptreact",
+			"javascript",
+			"css",
+			"sass",
+			"scss",
+			"less",
+			"svelte",
+			"vue",
+		},
+	})
+
 	-- -- docker
 	-- lspconfig.dockerls.setup({
 	-- 	capabilities = capabilities,
@@ -117,10 +117,10 @@ local config = function()
 	local black = require("efmls-configs.formatters.black")
 	local eslint_d = require("efmls-configs.linters.eslint_d")
 	local prettierd = require("efmls-configs.formatters.prettier_d")
-	-- local fixjson = require("efmls-configs.formatters.fixjson")
-	-- local shellcheck = require("efmls-configs.linters.shellcheck")
-	-- local shfmt = require("efmls-configs.formatters.shfmt")
-	-- local alex = require("efmls-configs.linters.alex")
+	local fixjson = require("efmls-configs.formatters.fixjson")
+	local shellcheck = require("efmls-configs.linters.shellcheck")
+	local shfmt = require("efmls-configs.formatters.shfmt")
+	local alex = require("efmls-configs.linters.alex")
 	-- local hadolint = require("efmls-configs.linters.hadolint")
 	-- local solhint = require("efmls-configs.linters.solhint")
 
@@ -129,16 +129,16 @@ local config = function()
 		filetypes = {
 			"lua",
 			"python",
-			-- "json",
-			-- "jsonc",
-			-- "sh",
-			-- "javascript",
-			-- "javascriptreact",
+			"json",
+			"jsonc",
+			"sh",
+			"javascript",
+			"javascriptreact",
 			"typescript",
-			-- "typescriptreact",
-			-- "svelte",
-			-- "vue",
-			-- "markdown",
+			"typescriptreact",
+			"svelte",
+			"vue",
+			"markdown",
 			-- "docker",
 			-- "solidity",
 		},
@@ -155,15 +155,15 @@ local config = function()
 				lua = { luacheck, stylua },
 				python = { flake8, black },
 				typescript = { eslint_d, prettierd },
-				-- json = { eslint_d, fixjson },
-				-- jsonc = { eslint_d, fixjson },
-				-- sh = { shellcheck, shfmt },
-				-- javascript = { eslint_d, prettierd },
-				-- javascriptreact = { eslint_d, prettierd },
-				-- typescriptreact = { eslint_d, prettierd },
-				-- svelte = { eslint_d, prettierd },
-				-- vue = { eslint_d, prettierd },
-				-- markdown = { alex, prettierd },
+				json = { eslint_d, fixjson },
+				jsonc = { eslint_d, fixjson },
+				sh = { shellcheck, shfmt },
+				javascript = { eslint_d, prettierd },
+				javascriptreact = { eslint_d, prettierd },
+				typescriptreact = { eslint_d, prettierd },
+				svelte = { eslint_d, prettierd },
+				vue = { eslint_d, prettierd },
+				markdown = { alex, prettierd },
 				-- docker = { hadolint, prettierd },
 				-- solidity = { solhint },
 			},

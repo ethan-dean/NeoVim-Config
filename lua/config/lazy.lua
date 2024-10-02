@@ -23,8 +23,8 @@ require("config.globals")
 require("config.options")
 -- SETUP KEYMAPS --
 require("config.keymaps")
--- SETUP AUTO COMMANDS --
-require("config.autocmds")
+-- SETUP AUTO COMMANDS (currently off to prevent format on save) --
+-- require("config.autocmds")
 -- SETUP LAZY.NVIM --
 require("lazy").setup({
 	-- PLUGINS --
