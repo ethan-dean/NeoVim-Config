@@ -110,7 +110,7 @@ local config = function()
 	-- 	on_attach = on_attach,
 	-- })
 
-  -- efm provides configs for mason linters and formatters
+	-- efm provides configs for mason linters and formatters
 	local luacheck = require("efmls-configs.linters.luacheck")
 	local stylua = require("efmls-configs.formatters.stylua")
 	local flake8 = require("efmls-configs.linters.flake8")
@@ -169,7 +169,6 @@ local config = function()
 			},
 		},
 	})
-
 end
 
 return {
