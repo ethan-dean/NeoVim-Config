@@ -9,11 +9,11 @@ mapkey("<leader>bb", "e #", "n") -- Switch to Other Buffer
 mapkey("<leader>m", "NvimTreeFocus", "n")
 mapkey("<leader>e", "NvimTreeToggle", "n")
 
--- Pane and Window Navigation
-mapkey("<C-h>", "<C-w>h", "n") -- Navigate Left
-mapkey("<C-j>", "<C-w>j", "n") -- Navigate Down
-mapkey("<C-k>", "<C-w>k", "n") -- Navigate Up
-mapkey("<C-l>", "<C-w>l", "n") -- Navigate Right
+-- Pane and Window Navigation (C-w converted to ^w by mapkey need vim)
+vim.api.nvim_set_keymap("n", "<C-h>", "<C-w>h", {noremap = true, silent=true})
+vim.api.nvim_set_keymap("n", "<C-j>", "<C-w>j", {noremap = true, silent=true})
+vim.api.nvim_set_keymap("n", "<C-k>", "<C-w>k", {noremap = true, silent=true})
+vim.api.nvim_set_keymap("n", "<C-l>", "<C-w>l", {noremap = true, silent=true})
 
 -- Window Management
 mapkey("<leader>sv", "vsplit", "n") -- Split Vertically
