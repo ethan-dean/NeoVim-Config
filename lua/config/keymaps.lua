@@ -26,3 +26,6 @@ mapkey("<C-Right>", "vertical resize -2", "n")
 -- Commenting
 vim.api.nvim_set_keymap("n", "<C-/>", "gcc", { noremap = false }) -- Comment line in normal mode
 vim.api.nvim_set_keymap("v", "<C-/>", "gcc", { noremap = false }) -- Comment block in visual mode
+
+-- Markdown Preview
+mapkey("<leader>gp", "Glow", "n")

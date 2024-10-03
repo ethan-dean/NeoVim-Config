@@ -12,6 +12,12 @@ local config = function()
 		{ "<leader>bb", desc = "Buffer Before" },
 		{ "<leader>bp", desc = "Buffer Previous" },
 		{ "<leader>bn", desc = "Buffer Next" },
+    -- Go Commands
+    { "<leader>gd", desc = "Go to Definition" },
+    { "<leader>gD", desc = "Go to Definition Peek" },
+    { "<leader>gs", desc = "Go to Definition Split" },
+    { "<leader>gn", desc = "Go to Next Diagnostic" },
+    { "<leader>gp", desc = "Go to Preview" },
 	})
 end
 
