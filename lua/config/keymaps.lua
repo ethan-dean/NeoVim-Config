@@ -28,9 +28,12 @@ vim.api.nvim_set_keymap("n", "<C-/>", "gcc", { noremap = false }) -- Comment lin
 vim.api.nvim_set_keymap("v", "<C-/>", "gcc", { noremap = false }) -- Comment block in visual mode
 
 -- Markdown Preview
-mapkey("<leader>gp", "Glow", "n")
+mapkey("<leader>gp", "Markview splitToggle", "n")
 
 -- Git Diffview
 mapkey("<leader>dh", "DiffviewOpen", "n")
 mapkey("<leader>do", "DiffviewOpen origin/main...HEAD", "n")
 mapkey("<leader>dc", "DiffviewClose", "n")
+
+-- Procrastination
+mapkey("<leader>fml", "CellularAutomaton make_it_rain", "n")
