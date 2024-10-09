@@ -29,3 +29,8 @@ vim.api.nvim_set_keymap("v", "<C-/>", "gcc", { noremap = false }) -- Comment blo
 
 -- Markdown Preview
 mapkey("<leader>gp", "Glow", "n")
+
+-- Git Diffview
+mapkey("<leader>dh", "DiffviewOpen", "n")
+mapkey("<leader>do", "DiffviewOpen origin/main...HEAD", "n")
+mapkey("<leader>dc", "DiffviewClose", "n")
