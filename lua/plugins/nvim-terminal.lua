@@ -20,14 +20,14 @@ return {
 			},
 			{
 				toggle_modes,
-				"<leader>tv",
+				"<leader>th",
 				function()
 					require("nvterm.terminal").toggle("horizontal")
 				end,
 			},
 			{
 				toggle_modes,
-				"<leader>th",
+				"<leader>tv",
 				function()
 					require("nvterm.terminal").toggle("vertical")
 				end,
