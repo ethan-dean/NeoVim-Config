@@ -5,4 +5,5 @@ end
 return {
   "ggandor/leap.nvim",
   config = config,
+  lazy = false,
 }

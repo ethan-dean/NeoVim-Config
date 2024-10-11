@@ -6,7 +6,7 @@ to change it to
 'Hello world!'
 ]]--
 return {
-  "tpope/vim-surround",
+  "ethan-dean/vim-surround-custom",
   lazy = false,
   -- Allows custom operators to be repeated with . --
   dependencies = { "tpope/vim-repeat" },
